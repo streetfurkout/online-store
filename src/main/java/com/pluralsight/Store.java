@@ -111,6 +111,8 @@ public class Store {
                     System.err.println("Invalid selection! Please try again");
             }
         }
+    }
+    public static void searchProduct(ArrayList<Product> inventory, Scanner scanner) {
         
     }
 
