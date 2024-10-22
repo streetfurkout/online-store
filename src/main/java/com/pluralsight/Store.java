@@ -113,7 +113,9 @@ public class Store {
         }
     }
     public static void searchProduct(ArrayList<Product> inventory, Scanner scanner) {
-        
+        System.out.println("Please enter a product name or ID:");
+        String searchItem = scanner.nextLine().trim().toUpperCase();
+        boolean found = false;
     }
 
     public static void displayCart(ArrayList<Product> cart, Scanner scanner, double totalAmount) {
