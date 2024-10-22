@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -55,6 +57,26 @@ public class Store {
         //
         // where id is a unique string identifier, name is the product name,
         // price is a double value representing the price of the product
+
+        String line;
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
+            while ((line = br.readLine()) != null) {
+                String[] variables = line.split("\\|");
+                if (variables.length == 3) {
+                    String id = variables[0].trim();
+                    String name = variables[1].trim();
+                    double price = Double.parseDouble(variables[2].trim());
+                    inventory.add(new Product(id, name, price));
+                }else {
+                    System.err.println("Invalid input format, please try againnn");
+                }
+
+            }
+        } catch (Exception e) {
+            System.err.println("Attention there is a potato!!!");
+        }
+
     }
 
     public static void displayProducts(ArrayList<Product> inventory, ArrayList<Product> cart, Scanner scanner) {
@@ -63,6 +85,14 @@ public class Store {
         // prompt the user to enter the ID of the product they want to add to
         // their cart. The method should
         // add the selected product to the cart ArrayList.
+
+        for (Product product : inventory) {
+            System.out.println(product);
+
+        }
+        System.out.println("Plese enter a product ID to add to cart");
+        String input = scanner.nextLine();
+
     }
 
     public static void displayCart(ArrayList<Product> cart, Scanner scanner, double totalAmount) {
@@ -80,10 +110,9 @@ public class Store {
         // from their account if they confirm.
     }
 
-    public static Product findProductById(String id, ArrayList<Product> inventory) {
+    //public static Product findProductById(String id, ArrayList<Product> inventory) {
         // This method should search the inventory ArrayList for a product with
         // the specified ID, and return the corresponding com.pluralsight.Product object. If
         // no product with the specified ID is found, the method should return
         // null.
     }
-}
