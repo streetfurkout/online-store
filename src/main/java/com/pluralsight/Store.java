@@ -130,6 +130,21 @@ public class Store {
         }
     }
 
+    public static void addProductToCart(ArrayList<Product> inventory, Scanner scanner) {
+        System.out.println("Please enter a product name or ID:");
+        String input = scanner.nextLine().trim();
+        if(input.equalsIgnoreCase("cancel")) {
+            return;
+        }
+    Product selectedProduct = findProductById(input, inventory);
+        if (selectedProduct!=null) {
+            cart.add(selectedProduct);
+            System.out.println(selectedProduct.getProduct() + " has been added to the cart.");
+        }else {
+            System.out.println("Product Id couldn`t found. Please try again!");
+        }
+    }
+
     public static void displayCart(ArrayList<Product> cart, Scanner scanner, double totalAmount) {
         // This method should display the items in the cart ArrayList, along
         // with the total cost of all items in the cart. The method should
