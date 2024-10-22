@@ -91,11 +91,27 @@ public class Store {
             for (Product product : inventory)  {
                 System.out.println(product);
             }
+            System.out.println("     Selections");
+            System.out.println("1. Search Product");
+            System.out.println("2. Add to your cart");
+            System.out.println("3. Go back to the Home Screen");
+            String selection = scanner.nextLine();
+
+            switch (selection) {
+                case "1":
+                    searchProduct(inventor, scanner);
+                    break;
+
+                case "2":
+                    addProductToCart(inventory,cart,scanner);
+                    break;
+                case "3":
+                    return;
+                default:
+                    System.err.println("Invalid selection! Please try again");
+            }
         }
-
-
-
-
+        
     }
 
     public static void displayCart(ArrayList<Product> cart, Scanner scanner, double totalAmount) {
