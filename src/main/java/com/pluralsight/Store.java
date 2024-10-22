@@ -86,12 +86,15 @@ public class Store {
         // their cart. The method should
         // add the selected product to the cart ArrayList.
 
-        for (Product product : inventory) {
-            System.out.println(product);
-
+        while(true) {
+            System.out.println("These are the avaliable products:");
+            for (Product product : inventory)  {
+                System.out.println(product);
+            }
         }
-        System.out.println("Plese enter a product ID to add to cart");
-        String input = scanner.nextLine();
+
+
+
 
     }
 
