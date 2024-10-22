@@ -99,7 +99,7 @@ public class Store {
 
             switch (selection) {
                 case "1":
-                    searchProduct(inventor, scanner);
+                    searchProduct(inventory, scanner);
                     break;
 
                 case "2":
@@ -116,6 +116,14 @@ public class Store {
         System.out.println("Please enter a product name or ID:");
         String searchItem = scanner.nextLine().trim().toUpperCase();
         boolean found = false;
+
+        for (Product product : inventory) {
+
+            if (product.getId().toLowerCase().contains(searchItem) || product.getProduct().toLowerCase().contains(searchItem)) {
+
+            }
+
+        }
     }
 
     public static void displayCart(ArrayList<Product> cart, Scanner scanner, double totalAmount) {
