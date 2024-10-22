@@ -120,9 +120,13 @@ public class Store {
         for (Product product : inventory) {
 
             if (product.getId().toLowerCase().contains(searchItem) || product.getProduct().toLowerCase().contains(searchItem)) {
-
+                System.out.println(product);
+                found =true;
             }
 
+        }
+        if (!found) {
+            System.out.println("Nothing matched with the inventory");
         }
     }
 
