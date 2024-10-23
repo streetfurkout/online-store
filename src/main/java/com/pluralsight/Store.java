@@ -138,6 +138,10 @@ public class Store {
     }
 
     public static void displayCart(ArrayList<Product> cart) {
+        if (cart.isEmpty()){
+            System.out.println("Your cart is empty please add at least 1 item.");
+            return;
+        }
         double totalAmount = 0; // Initialize totalAmount here
         System.out.println("Items in your cart:");
         for (Product product : cart) {
@@ -145,5 +149,27 @@ public class Store {
             totalAmount += product.getPrice(); // Assuming getPrice() returns product price
         }
         System.out.printf("Total Amount: $%.2f%n", totalAmount);
+
+        System.out.println("Please Choose One of Them:");
+        System.out.println("1. Check Out");
+        System.out.println("2. Remove an item from the cart");
+        System.out.println("Go back to the home screen");
+
+
+        String option = scanner.nextLine().trim();
+            switch (option) {
+                case "1":
+                    checkout(totalAmount, cart);
+                    break;
+                case "2":
+                    removeProductFromCart(cart,scanner);
+                    break;
+                case "3":
+                    return; //to go back to the home screen!!!
+                default:
+                    System.err.println("Please enter a valid selection! Now going to the main menu");
+                    break;
+            }
     }
+    
 }
