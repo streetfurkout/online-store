@@ -1,10 +1,9 @@
 # Project Title
-
+Online Store
 ## Description of the Project
 
-Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
-
-![Class Diagram](path/to/your/class_diagram.png)
+The application will offer users a virtual storefront,
+allowing them to browse, select, and purchase items directly through the command line interface.
 
 ## User Stories
 
@@ -38,33 +37,32 @@ Follow these steps to get your application running within IntelliJ IDEA:
 - Any additional libraries or frameworks used in the project.
 
 ## Demo
-
-Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
-
-![Application Screenshot](path/to/your/screenshot.png)
-
+![homeScreen.png](imgs%2FhomeScreen.png)
+![searchProduct.png](imgs%2FsearchProduct.png)
+![showCart.png](imgs%2FshowCart.png)
+![showProduct.png](imgs%2FshowProduct.png)
+![goBactToHomeScreen.png](imgs%2FgoBactToHomeScreen.png)
+![exit.png](imgs%2Fexit.png)
+![addProduct.png](imgs%2FaddProduct.png)
 ## Future Work
 
 Outline potential future enhancements or functionalities you might consider adding:
 
-- Additional feature to be developed.
-- Improvement of current functionalities.
+- Balance section can be added.
+- some virtual graphics can be added.
 
 ## Resources
 
 List resources such as tutorials, articles, or documentation that helped you during the project.
 
-- [Java Programming Tutorial](https://www.example.com)
-- [Effective Java](https://www.example.com)
+- [Java Programming Tutorial](https://www.w3schools.com/java/java_while_loop.asp)
+- https://yearup.brightspace.com/d2l/home/8605
 
 ## Team Members
 
-- **Name 1** - Specific contributions or roles.
-- **Name 2** - Specific contributions or roles.
+- Furkan KENDIRCIOGLU
 
 ## Thanks
 
-Express gratitude towards those who provided help, guidance, or resources:
 
-- Thank you to [Mentor's Name] for continuous support and guidance.
-- A special thanks to all teammates for their dedication and teamwork.
+- Thank you to Raymond for continuous support and guidance.
