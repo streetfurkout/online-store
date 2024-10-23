@@ -156,36 +156,30 @@ public class Store {
         System.out.println("Go back to the home screen");
 
 
-        /**
-         * String option = scanner.nextLine().trim();
-         *             switch (option) {
-         *                 case "1":
-         *                     checkout(totalAmount, cart);
-         *                     break;
-         *                 case "2":
-         *                     removeProductFromCart(cart,scanner);
-         *                     break;
-         *                 case "3":
-         *                     return; //to go back to the home screen!!!
-         *                 default:
-         *                     System.err.println("Please enter a valid selection! Now going to the main menu");
-         *                     break;
-         *             }
-         *     }
-         *         public static void checkout(double totalAmount, ArrayList<Product> cart) {
-         *             System.out.println("Your total is: $" + totalAmount);
-         *             cart.clear(); //this is a new syntax what I learnt and with it we are clearing the cart after we checked out!!!!!!
-         *             System.out.println("Thank you for your shopping with us :)");
-         *         }
-         *         public static void removeProductFromCart (ArrayList<Product> cart , Scanner scanner) {
-         *             System.out.println("Please enter the Id of the product");
-         *             String item = scanner.nextLine().trim();
-         *
-         *
-         *
-         *         }
-         * }
-          */
 
-    }
-}
+          String option = scanner.nextLine().trim();
+                      switch (option) {
+                          case "1":
+                              checkout(totalAmount, cart);
+                              break;
+                          case "2":
+                              removeProductFromCart(cart,scanner);
+                              break;
+                          case "3":
+                              return; //to go back to the home screen!!!
+                          default:
+                              System.err.println("Please enter a valid selection! Now going to the main menu");
+                              break;
+                      }
+              }
+                  public static void checkout(double totalAmount, ArrayList<Product> cart) {
+                      System.out.println("Your total is: $" + totalAmount);
+                      cart.clear(); //this is a new syntax what I learnt and with it we are clearing the cart after we checked out!!!!!!
+                      System.out.println("Thank you for your shopping with us :)");
+                  }
+                  public static void removeProductFromCart (ArrayList<Product> cart , Scanner scanner) {
+                      System.out.println("Please enter the Id of the product");
+                      String item = scanner.nextLine().trim();
+                  }
+          }
+
