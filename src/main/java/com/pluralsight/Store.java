@@ -171,5 +171,9 @@ public class Store {
                     break;
             }
     }
-    
+        public static void checkout(double totalAmount, ArrayList<Product> cart) {
+            System.out.println("Your total is: $" + totalAmount);
+            cart.clear(); //this is a new syntax what I learnt and with it we are clearing the cart after we checked out!!!!!!
+            System.out.println("Thank you for your shopping with us :)");
+        }
 }
