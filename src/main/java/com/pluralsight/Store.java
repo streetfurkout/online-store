@@ -176,4 +176,7 @@ public class Store {
             cart.clear(); //this is a new syntax what I learnt and with it we are clearing the cart after we checked out!!!!!!
             System.out.println("Thank you for your shopping with us :)");
         }
+        public static void removeProductFromCart (ArrayList<Product> cart , Scanner scanner) {
+        
+        }
 }
